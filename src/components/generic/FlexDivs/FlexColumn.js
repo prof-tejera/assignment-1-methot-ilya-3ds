@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
 
 const styles = {
   centered: {
@@ -34,6 +35,34 @@ class FlexColumn extends Component {
       </div>
     );
   }
+}
+
+FlexColumn.propTypes = {
+  color: PropTypes.string,
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  margin: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  padding: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
+}
+
+FlexColumn.defaultProps = {
+  color: "white",
+  width: "100px",
+  height: "200px",
+  margin: "0px;",
+  padding: "10px"
 }
 
 export default FlexColumn;

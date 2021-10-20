@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./Button.css";
+import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
@@ -15,7 +16,7 @@ class Button extends Component {
             height: this.props.height,
             cursor: this.props.disabled && "auto",
             borderRadius: "30px",
-            
+            fontSize: "auto"
           }
         }
         className={this.props.className}
@@ -23,7 +24,6 @@ class Button extends Component {
         selected={this.props.selected}
 
       >
-        {this.props.text}
         {this.props.image}
         {this.props.children}
       </button>
@@ -31,9 +31,23 @@ class Button extends Component {
   }
 }
 
+Button.propTypes = {
+  onClick: PropTypes.func,
+  color: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  selected: PropTypes.bool,
+}
+
 Button.defaultProps = {
+  width: "50px",
+  height: "50px",
   className: "Default-button",
-  backgroundColor: "blue"
+  disabled: false,
+  selected: false,
+  color: "black"
 }
 
 export default Button;

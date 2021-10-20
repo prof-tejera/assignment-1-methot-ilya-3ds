@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./NeonButtons.css"
+import PropTypes from 'prop-types';
 
 class NeonButton extends Component {
   render() {
@@ -14,10 +15,10 @@ class NeonButton extends Component {
             height: this.props.height,
             cursor: this.props.disabled && "auto",
             borderRadius: "30px",
-            
+
           }
         }
-        className= {this.props.className}
+        className={this.props.className}
         disabled={this.props.disabled}
         selected={this.props.selected}
 
@@ -30,9 +31,25 @@ class NeonButton extends Component {
   }
 }
 
+NeonButton.propTypes = {
+  onClick: PropTypes.func,
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+}
+
 NeonButton.defaultProps = {
-  className: "Default-button",
-  backgroundColor: "blue"
+  width: 50,
+  height: "50px",
+  className: "StartButton",
+  disabled: false,
 }
 
 

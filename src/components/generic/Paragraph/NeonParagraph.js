@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./NeonParagraph.css"
+import PropTypes from 'prop-types';
 
 class NeonParagraph extends Component {
   render() {
@@ -14,6 +15,34 @@ class NeonParagraph extends Component {
         padding: this.props.padding
     }}>{this.props.children}</p>;
   }
+}
+
+NeonParagraph.propTypes = {
+  color: PropTypes.string,
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  padding: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
+}
+
+NeonParagraph.defaultProps = {
+  color: "Blue",
+  width: "200px",
+  height: "200px",
+  size: "24px",
+  padding: "10px"
 }
 
 export default NeonParagraph;
