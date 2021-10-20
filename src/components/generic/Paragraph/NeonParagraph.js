@@ -7,7 +7,11 @@ class NeonParagraph extends Component {
         color: this.props.color,
         textShadow: `0 0 10px ${this.props.color}`,
         fontSize: this.props.size,
-        className: "NeonParagraph"
+        className: "NeonParagraph",
+        height: this.props.height,
+        width: this.props.width,
+        margin: "0px",
+        padding: this.props.padding
     }}>{this.props.children}</p>;
   }
 }

@@ -84,7 +84,7 @@ Incrementer.defaultProps = {
   height: 50,
   max: 10,
   min: 0,
-  addZeros: 2,
+  addZeros: 0,
   scale: "",
 };
 

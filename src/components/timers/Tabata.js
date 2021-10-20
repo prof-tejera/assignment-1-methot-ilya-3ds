@@ -2,6 +2,10 @@ import React from "react";
 import Button from "../generic/Button/Button"
 import FlexColumn from "../generic/FlexDivs/FlexColumn";
 import FlexRow from "../generic/FlexDivs/FlexRow";
+import Background from "../generic/Background/Background";
+import Incrementer from "../generic/Incrementer/Incrementer";
+import NeonParagraph from "../generic/Paragraph/NeonParagraph";
+import NeonButton from "../generic/Button/NeonButtons";
 
 class Tabata extends React.Component {
   constructor(props) {
@@ -143,45 +147,32 @@ class Tabata extends React.Component {
 
     return (
       <>
-        <FlexRow color="grey">
-          <FlexColumn centered="true" color="grey">
-            <FlexRow >
-              <p>Round</p>
-            </FlexRow>
-            <Button onClick={incrementRounds} centered="true" width="25px" height="25px">^</Button>
-            <Button disabled="true" centered="true" width="50px" height="50px">{this.state.round}</Button>
-            <Button onClick={decreaseRounds} centered="true" width="25px" height="25px">v</Button>
-          </FlexColumn>
-          <FlexColumn spaceEvenly="true" width="300px">
-            <FlexRow>
-              <FlexColumn width="50%" centered="true">
-                <FlexRow >
-                  <p>Work Time</p>
-                </FlexRow>
-                <Button onClick={incrementWork} centered="true" width="25px" height="25px">^</Button>
-                <Button disabled="true" centered="true" width="50px" height="50px">{this.state.work}s</Button>
-                <Button onClick={decreaseWork} centered="true" width="25px" height="25px">v</Button>
-              </FlexColumn>
-              <FlexColumn width="50%"  centered="true">
-                <FlexRow >
-                  <p>Rest Time</p>
-                </FlexRow>
-                <Button onClick={incrementRest} centered="true" width="25px" height="25px">^</Button>
-                <Button disabled="true" centered="true" width="50px" height="50px">{this.state.rest}s</Button>
-                <Button onClick={decreaseRest} centered="true" width="25px" height="25px">v</Button>
-              </FlexColumn>
-              <FlexRow width="100%" centered="true" spaceEvenly="true" centered="true">
-                <Button onClick={start} color="green" width="30%" height="50px">start</Button>
-                <Button onClick={stop} color="grey" width="30%" height="50px">pause</Button>
-                <Button onClick={restart} color="yellow" width="20%" height="50px">&#8634;</Button>
-              </FlexRow>
-              <FlexRow width="100%" spaceEvenly="true" centered="true">
-                <Button onClick={clear} color="red" width="100%" height="50px">Clear</Button>
-              </FlexRow>
-            </FlexRow>
-          </FlexColumn>
+        <Background centered="true" width="300px" padding="20px">
 
-        </FlexRow>
+
+
+              <NeonParagraph padding="10px" height="10%" color="#00C0F9" size="36px" >Tabata</NeonParagraph>
+              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Round</NeonParagraph>
+              <Incrementer padding="10px" width="30px" height="auto" max="60" min="0"/>
+
+            <FlexRow width="100%" height="30%" padding="10px">
+              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Work</NeonParagraph>
+              <Incrementer  width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
+              <Incrementer width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
+              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Rest</NeonParagraph>
+            </FlexRow>
+            <FlexRow  height="30%" width="100%">
+              <FlexRow padding="10px" height="50%"width="100%" centered="true" spaceEvenly="true" centered="true">
+                  <NeonButton onClick={start} className="StartButton"width="30%" height="50px">start</NeonButton>
+                  <NeonButton onClick={stop}  className="PauseButton" width="30%" height="50px">pause</NeonButton>
+                  <NeonButton onClick={restart}  className="RestartButton" width="20%" height="50px">&#8634;</NeonButton>
+              </FlexRow>
+              <FlexRow padding="10px" height="50%" width="100%" spaceEvenly="true" centered="true">
+                  <NeonButton onClick={clear} className="ClearButton" width="100%" height="50px">Clear</NeonButton>
+              </FlexRow>
+            </FlexRow>
+
+        </Background>
       </>
     );
   }

@@ -80,15 +80,6 @@ class Countdown extends React.Component {
     this.componentDidMount = () => {
       clearInterval(this.state.timerID);
     }
-
-    function padLeadingZeros(num, size) {
-      var s = num + "";
-      while (s.length < size) s = "0" + s;
-      return s;
-    }
-    // examples:
-    // padLeadingZeros(57, 3);// "057"
-    // padLeadingZeros(57, 4); //"0057"
     
 
     return (
