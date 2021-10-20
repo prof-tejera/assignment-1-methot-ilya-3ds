@@ -1,7 +1,9 @@
 import React from "react";
-import Button from "../generic/Button/Button"
-import FlexColumn from "../generic/FlexDivs/FlexColumn";
 import FlexRow from "../generic/FlexDivs/FlexRow";
+import Background from "../generic/Background/Background";
+import Incrementer from "../generic/Incrementer/Incrementer";
+import NeonParagraph from "../generic/Paragraph/NeonParagraph";
+import NeonButton from "../generic/Button/NeonButtons";
 
 class Stopwatch extends React.Component {
   constructor(props) {
@@ -18,37 +20,6 @@ class Stopwatch extends React.Component {
   }
 
   render() {
-
-    const incrementMilleseconds = () => {
-      console.log("incrementing seconds: " +  this.state.seconds);
-      if (this.state.seconds < 1000) {
-        this.setState({ seconds: this.state.seconds + 1 })
-      }
-    }
-    const incrementSeconds = () => {
-      console.log("incrementing seconds: " +  this.state.seconds);
-      if (this.state.seconds < 60) {
-        this.setState({ seconds: this.state.seconds + 1 })
-      }
-    }
-    const incrementMinutes = () => {
-      console.log("incrementing minutes " +  this.state.minutes);
-      if (this.state.minutes < 60) {
-        this.setState({ minutes: this.state.minutes + 1 })
-      }
-    }
-    const incrementHours = () => {
-      console.log("incrementing hours " +  this.state.hours);
-      if (this.state.hours < 24) {
-        this.setState({ hours: this.state.hours + 1 })
-      }
-    }
-    const incrementDays = () => {
-      console.log("incrementing days " +  this.state.days);
-      if (this.state.days < 360) {
-        this.setState({ days: this.state.days + 1 })
-      }
-    }
 
     // Convert seconds into days, hours, minutes, and seconds for the countdown presentation
 
@@ -102,25 +73,26 @@ class Stopwatch extends React.Component {
 
     return (
       <>
-        <FlexColumn color="grey">
-          <FlexRow centered="true">
-            <p>Stopwatch</p>
+        <Background centered="true" width="300px" padding="20px">
+          <FlexRow height="25%" centered="true">
+          <NeonParagraph color="#00C0F9" size="24px">Stopwatch</NeonParagraph>
           </FlexRow>
-          <FlexRow width="auto" height="auto" centered="true">
-            <Button disabled="true" width="50px" height="50px">{ this.state.days}d</Button>
-            <Button disabled="true" width="50px" height="50px">{ this.state.hours}h</Button>
-            <Button disabled="true" width="50px" height="50px">{ this.state.minutes}m</Button>
-            <Button disabled="true" width="50px" height="50px">{ this.state.seconds}s</Button>
-            <Button disabled="true" width="50px" height="50px">{ this.state.milleseconds}ms</Button>
+          <FlexRow height="25%" spaceEvenly="true" width="auto"centered="true">
+            <NeonButton className="display" disabled="true" width="40px" height="40px">{ this.state.days}d</NeonButton>
+            <NeonButton className="display" disabled="true" width="40px" height="40px">{ this.state.hours}h</NeonButton>
+            <NeonButton className="display" disabled="true" width="40px" height="40px">{ this.state.minutes}m</NeonButton>
+            <NeonButton className="display" disabled="true" width="40px" height="40px">{ this.state.seconds}s</NeonButton>
+            <NeonButton className="display" disabled="true" width="40px" height="40px">{ this.state.milleseconds}ms</NeonButton>
           </FlexRow>
-          <FlexRow spaceEvenly="true" centered="true">
-            <Button onClick={start} color="green" width="50%" height="50px">start</Button>
-            <Button onClick={stop} color="grey" width="50%" height="50px">pause</Button>
+          <FlexRow height="25%" padding="10px" width="100%" centered="true">
+            <NeonButton className="StartButton" onClick={start} width="30%" height="50px">Start</NeonButton>
+            <NeonButton className="PauseButton" onClick={stop} width="30%" height="50px">Pause</NeonButton>
+            <NeonButton className="RestartButton" onClick={restart} width="20%" height="50px">&#8634;</NeonButton>
           </FlexRow>
-          <FlexRow spaceEvenly="true" centered="true">
-          <Button onClick={clear} color="red" width="100%" height="50px">Clear</Button>
+          <FlexRow height="25%" padding="10px" width="100%" spaceEvenly="true" centered="true">
+            <NeonButton className="ClearButton" onClick={clear} width="100%" height="50px">Clear</NeonButton>
           </FlexRow>
-        </FlexColumn>
+        </Background>
       </>
     );
   }

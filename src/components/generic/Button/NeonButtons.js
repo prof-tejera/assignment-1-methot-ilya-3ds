@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./Button.css";
+import "./NeonButtons.css"
 
-class Button extends Component {
+class NeonButton extends Component {
   render() {
     return (
       <button
@@ -10,7 +10,6 @@ class Button extends Component {
           {
             boxSizing: "border-box",
             textAlign: "center",
-            backgroundColor: this.props.color,
             width: this.props.width,
             height: this.props.height,
             cursor: this.props.disabled && "auto",
@@ -18,7 +17,7 @@ class Button extends Component {
             
           }
         }
-        className={this.props.className}
+        className= {this.props.className}
         disabled={this.props.disabled}
         selected={this.props.selected}
 
@@ -31,9 +30,10 @@ class Button extends Component {
   }
 }
 
-Button.defaultProps = {
+NeonButton.defaultProps = {
   className: "Default-button",
   backgroundColor: "blue"
 }
 
-export default Button;
+
+export default NeonButton;
