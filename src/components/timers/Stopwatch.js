@@ -89,6 +89,7 @@ class Stopwatch extends React.Component {
     const clear = () => {
       clearInterval(this.state.timerID);
       convertSecondsToTimer(0);
+      this.setState({currentTime: 0});
     }
 
     this.componentWillUnmount = () => {
@@ -113,9 +114,8 @@ class Stopwatch extends React.Component {
             <Button disabled="true" width="50px" height="50px">{ this.state.milleseconds}ms</Button>
           </FlexRow>
           <FlexRow spaceEvenly="true" centered="true">
-            <Button onClick={start} color="green" width="30%" height="50px">start</Button>
-            <Button onClick={stop} color="grey" width="30%" height="50px">pause</Button>
-            <Button onClick={restart} color="yellow" width="20%" height="50px">&#8634;</Button>
+            <Button onClick={start} color="green" width="50%" height="50px">start</Button>
+            <Button onClick={stop} color="grey" width="50%" height="50px">pause</Button>
           </FlexRow>
           <FlexRow spaceEvenly="true" centered="true">
           <Button onClick={clear} color="red" width="100%" height="50px">Clear</Button>

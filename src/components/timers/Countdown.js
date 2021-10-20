@@ -82,12 +82,11 @@ class Countdown extends React.Component {
       this.setState({ seconds: hoursRemainder % 60 });
     }
 
-    // Buttons Start
-    //
-
     const start = () => {
+
       const initialSeconds = convertTimerToSeconds();
       this.state.initialTime = initialSeconds;
+
       this.state.timerID = setInterval(() => {
         let totalSeconds = convertTimerToSeconds();
         console.log("total seconds are" + totalSeconds);
@@ -95,7 +94,9 @@ class Countdown extends React.Component {
           totalSeconds = totalSeconds - 1;
           convertSecondsToTimer(totalSeconds);
           console.log("minutes: " + this.state.minutes + "seconds: " + this.state.seconds)
-          // somehow we trigger a rerender here?
+        }
+        else{
+          stop();
         }
       }, 1000)
     }

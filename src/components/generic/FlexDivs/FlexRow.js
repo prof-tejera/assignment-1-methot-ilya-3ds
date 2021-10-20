@@ -23,6 +23,7 @@ class FlexRow extends Component {
             width: this.props.width,
             height: this.props.height,
             flexDirection: "row",
+            flexWrap: "wrap",
             ...this.props.centered && styles.centered,
             ...this.props.spaceEvenly && styles.spaceEvenly
         }
