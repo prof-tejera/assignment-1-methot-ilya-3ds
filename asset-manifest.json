@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/assignment-1-methot-ilya-3ds/static/css/main.851aa640.chunk.css",
-    "main.js": "/assignment-1-methot-ilya-3ds/static/js/main.fe0386b2.chunk.js",
-    "main.js.map": "/assignment-1-methot-ilya-3ds/static/js/main.fe0386b2.chunk.js.map",
+    "main.css": "/assignment-1-methot-ilya-3ds/static/css/main.92f71ca0.chunk.css",
+    "main.js": "/assignment-1-methot-ilya-3ds/static/js/main.1490598b.chunk.js",
+    "main.js.map": "/assignment-1-methot-ilya-3ds/static/js/main.1490598b.chunk.js.map",
     "runtime-main.js": "/assignment-1-methot-ilya-3ds/static/js/runtime-main.b5560eb2.js",
     "runtime-main.js.map": "/assignment-1-methot-ilya-3ds/static/js/runtime-main.b5560eb2.js.map",
-    "static/js/2.5f39ef01.chunk.js": "/assignment-1-methot-ilya-3ds/static/js/2.5f39ef01.chunk.js",
-    "static/js/2.5f39ef01.chunk.js.map": "/assignment-1-methot-ilya-3ds/static/js/2.5f39ef01.chunk.js.map",
+    "static/js/2.d8e2275d.chunk.js": "/assignment-1-methot-ilya-3ds/static/js/2.d8e2275d.chunk.js",
+    "static/js/2.d8e2275d.chunk.js.map": "/assignment-1-methot-ilya-3ds/static/js/2.d8e2275d.chunk.js.map",
     "index.html": "/assignment-1-methot-ilya-3ds/index.html",
-    "static/css/main.851aa640.chunk.css.map": "/assignment-1-methot-ilya-3ds/static/css/main.851aa640.chunk.css.map",
-    "static/js/2.5f39ef01.chunk.js.LICENSE.txt": "/assignment-1-methot-ilya-3ds/static/js/2.5f39ef01.chunk.js.LICENSE.txt"
+    "static/css/main.92f71ca0.chunk.css.map": "/assignment-1-methot-ilya-3ds/static/css/main.92f71ca0.chunk.css.map",
+    "static/js/2.d8e2275d.chunk.js.LICENSE.txt": "/assignment-1-methot-ilya-3ds/static/js/2.d8e2275d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b5560eb2.js",
-    "static/js/2.5f39ef01.chunk.js",
-    "static/css/main.851aa640.chunk.css",
-    "static/js/main.fe0386b2.chunk.js"
+    "static/js/2.d8e2275d.chunk.js",
+    "static/css/main.92f71ca0.chunk.css",
+    "static/js/main.1490598b.chunk.js"
   ]
 }
