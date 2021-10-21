@@ -15,7 +15,7 @@ class NeonButton extends Component {
             height: this.props.height,
             cursor: this.props.disabled && "auto",
             borderRadius: "30px",
-
+            boxSizing: "border-box"
           }
         }
         className={this.props.className}

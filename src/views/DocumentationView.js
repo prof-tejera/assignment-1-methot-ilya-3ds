@@ -5,6 +5,7 @@ import DocumentComponent from "../components/documentation/DocumentComponent";
 import NeonButton from "../components/generic/Button/NeonButtons";
 import FlexColumn from "../components/generic/FlexDivs/FlexColumn.js"
 import FlexRow from "../components/generic/FlexDivs/FlexRow";
+import Incrementer from "../components/generic/Incrementer/Incrementer";
 import Loading from "../components/generic/Loading";
 import NeonParagraph from "../components/generic/Paragraph/NeonParagraph";
 
@@ -75,13 +76,13 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "margin",
@@ -111,13 +112,13 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "margin",
@@ -134,7 +135,7 @@ class Documentation extends React.Component {
             ]}
           />
            <DocumentComponent
-            title="FlexRow"
+            title="NeonParagraph"
             component={<NeonParagraph>Neon Text</NeonParagraph>}
             propDocs={[
               {
@@ -147,19 +148,79 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of text container",
                 type: "string, number",
-                defaultValue: "200px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of text container",
                 type: "string, number",
-                defaultValue: "200px",
+                defaultValue: "auto",
+              },
+              {
+                prop: "size",
+                description: "Size of text",
+                type: "string, number",
+                defaultValue: "24px",
               },
               {
                 prop: "padding",
                 description: "padding of text container",
                 type: "string, number",
                 defaultValue: "10px",
+              },
+            ]}
+          />
+          <DocumentComponent
+            title="Incrementer"
+            component={<Incrementer/>}
+            propDocs={[
+              {
+                prop: "max",
+                description: "Max number the counter will increase to",
+                type: "number",
+                defaultValue: "10",
+              },
+              {
+                prop: "max",
+                description: "Min number the counter will decrease to",
+                type: "number",
+                defaultValue: "0",
+              },
+              {
+                prop: "addZeros",
+                description: "Display will always display this many numbers (example: setting addZeros to 2 will make 5 display as 05)",
+                type: "number",
+                defaultValue: "0",
+              },
+              {
+                prop: "scale",
+                description: "Character that appears besides number indicator display a scale (min, m, sec, s)",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "width",
+                description: "Width of object",
+                type: "string, number",
+                defaultValue: "auto",
+              },
+              {
+                prop: "height",
+                description: "Height of object",
+                type: "string, number",
+                defaultValue: "auto",
+              },
+              {
+                prop: "padding",
+                description: "padding of object",
+                type: "string, number",
+                defaultValue: "10px",
+              },
+              {
+                prop: "margin",
+                description: "Margin of object",
+                type: "string, number",
+                defaultValue: "0px",
               },
             ]}
           />

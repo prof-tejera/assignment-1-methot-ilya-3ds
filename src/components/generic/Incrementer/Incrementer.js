@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import FlexColumn from "../FlexDivs/FlexColumn";
 import FlexRow from "../FlexDivs/FlexRow";
 import "./Incrementer.css";
+import PropTypes from 'prop-types';
 
 class Incrementer extends Component {
   constructor(props) {
@@ -44,6 +45,8 @@ class Incrementer extends Component {
           height={this.props.height}
           centered="true"
           spaceEvenly="true"
+          margin= {this.props.margin}
+          padding= {this.props.padding}
         >
           <FlexRow spaceEvenly="true" centered="true">
             <Button
@@ -65,7 +68,7 @@ class Incrementer extends Component {
           </FlexRow>
           <FlexRow spaceEvenly="true" centered="true">
             <Button
-              onClick={changeTime("increment", this.props.min)}
+              onClick={() => changeTime("decrease", this.props.min)}
               className="smallButton"
               width={this.props.width / 2}
               height={this.props.height / 2}
@@ -79,6 +82,30 @@ class Incrementer extends Component {
   }
 }
 
+Incrementer.propTypes = {
+  color: PropTypes.string,
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  max: PropTypes.number,
+  min: PropTypes.number,
+  addZeros: PropTypes.number,
+  scale: PropTypes.string,
+  margin: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  padding: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
+}
+
 Incrementer.defaultProps = {
   width: 50,
   height: 50,
@@ -86,6 +113,8 @@ Incrementer.defaultProps = {
   min: 0,
   addZeros: 0,
   scale: "",
+  margin: "0px",
+  padding: "0px"
 };
 
 export default Incrementer;

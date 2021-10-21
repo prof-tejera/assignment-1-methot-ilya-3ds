@@ -28,6 +28,7 @@ class FlexRow extends Component {
           justifyContent: "center",
           alignItems: "center",
           alignContent: "center",
+          boxSizing: "border-box"
         }}
         className="Flex-Column"
       >
@@ -58,11 +59,11 @@ FlexRow.propTypes = {
 }
 
 FlexRow.defaultProps = {
-  color: "white",
-  width: "200px",
-  height: "100px",
+  color: "none",
+  width: "auto",
+  height: "auto",
   margin: "0px;",
-  padding: "10px"
+  padding: "0px"
 }
 
 
