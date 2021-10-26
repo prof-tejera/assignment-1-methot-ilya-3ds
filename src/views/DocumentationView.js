@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import DocumentComponent from "../components/documentation/DocumentComponent";
+import Background from "../components/generic/Background/Background";
 import NeonButton from "../components/generic/Button/NeonButtons";
 import FlexColumn from "../components/generic/FlexDivs/FlexColumn.js"
 import FlexRow from "../components/generic/FlexDivs/FlexRow";
 import Incrementer from "../components/generic/Incrementer/Incrementer";
+import Input from "../components/generic/Input/Input";
 import Loading from "../components/generic/Loading";
 import NeonParagraph from "../components/generic/Paragraph/NeonParagraph";
 
@@ -63,6 +65,30 @@ class Documentation extends React.Component {
             ]}
           />
           <DocumentComponent
+            title="Input"
+            component={<Input/>}
+            propDocs={[
+              {
+                prop: "width",
+                description: "Width of Input",
+                type: "string, number",
+                defaultValue: "50, 50px",
+              },
+              {
+                prop: "height",
+                description: "Height of Input",
+                type: "string, number",
+                defaultValue: "50, 50px",
+              },
+              {
+                prop: "disabled",
+                description: "Choose whether button is disabled (clickable)",
+                type: "bool",
+                defaultValue: "false",
+              },
+            ]}
+          />
+          <DocumentComponent
             title="FlexColumn"
             component={<FlexColumn><NeonButton>btn</NeonButton><NeonButton className="RestartButton">btn</NeonButton><NeonButton className="ClearButton">btn</NeonButton></FlexColumn>}
             propDocs={[
@@ -95,6 +121,12 @@ class Documentation extends React.Component {
                 description: "padding of div",
                 type: "string, number",
                 defaultValue: "10px",
+              },
+              {
+                prop: "spaceEvenly",
+                description: "determines whether to space child content evenly. If 'false', center the content",
+                type: "string",
+                defaultValue: "false",
               },
             ]}
           />
@@ -131,6 +163,12 @@ class Documentation extends React.Component {
                 description: "padding of div",
                 type: "string, number",
                 defaultValue: "10px",
+              },
+              {
+                prop: "spaceEvenly",
+                description: "determines whether to space child content evenly. If 'false', center the content",
+                type: "string",
+                defaultValue: "false",
               },
             ]}
           />
@@ -224,7 +262,32 @@ class Documentation extends React.Component {
               },
             ]}
           />
+          <DocumentComponent
+            title="Background"
+            component={<Background/>}
+            propDocs={[
+              {
+                prop: "width",
+                description: "Width of object",
+                type: "string, number",
+                defaultValue: "300",
+              },
+              {
+                prop: "height",
+                description: "Height of object",
+                type: "string, number",
+                defaultValue: "400",
+              },
+              {
+                prop: "padding",
+                description: "padding of object",
+                type: "string, number",
+                defaultValue: "10px",
+              }
+            ]}
+          />
         </div>
+        
       </Container>
     );
   }

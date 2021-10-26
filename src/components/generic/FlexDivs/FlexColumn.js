@@ -28,7 +28,8 @@ class FlexColumn extends Component {
           justifyContent: "center",
           alignItems: "center",
           alignContent: "center",
-          boxSizing: "border-box"
+          boxSizing: "border-box",
+          justifyContent: this.props.spaceEvenly ? styles.spaceEvenly.justifyContent : styles.centered.justifyContent
         }}
         className="Flex-Column"
       >
@@ -55,7 +56,8 @@ FlexColumn.propTypes = {
   padding: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+  spaceEvenly: PropTypes.string,
 }
 
 FlexColumn.defaultProps = {
@@ -63,7 +65,8 @@ FlexColumn.defaultProps = {
   width: "auto",
   height: "auto",
   margin: "0px;",
-  padding: "0px"
+  padding: "0px",
+  spaceEvenly: "false"
 }
 
 export default FlexColumn;

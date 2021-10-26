@@ -3,7 +3,8 @@ import Button from "../Button/Button";
 import FlexColumn from "../FlexDivs/FlexColumn";
 import FlexRow from "../FlexDivs/FlexRow";
 import "./Incrementer.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import Input from "../Input/Input";
 
 class Incrementer extends Component {
   constructor(props) {
@@ -40,15 +41,15 @@ class Incrementer extends Component {
 
     return (
       <>
-        <FlexColumn padding="10px"
-          width={this.props.width}
-          height={this.props.height}
+        <FlexColumn
+          padding="10px"
+          width="auto"
+          height="auto"
           centered="true"
           spaceEvenly="true"
-          margin= {this.props.margin}
-          padding= {this.props.padding}
+          margin={this.props.margin}
         >
-          <FlexRow spaceEvenly="true" centered="true">
+          <FlexRow width="auto" height="auto" spaceEvenly="true" centered="true">
             <Button
               onClick={() => {
                 changeTime("increment", this.props.max);
@@ -61,12 +62,13 @@ class Incrementer extends Component {
             </Button>
           </FlexRow>
           <FlexRow width="auto" height="auto" centered="true">
-            <Button className="display" disabled="true" width={this.props.width} height={this.props.height}>
-              {padLeadingZeros(this.state.variable, this.props.addZeros)}
-              {this.props.scale}
-            </Button>
+            <Input
+              width={this.props.width}
+              height={this.props.height}
+            >
+            </Input>
           </FlexRow>
-          <FlexRow spaceEvenly="true" centered="true">
+          <FlexRow width="auto" height="auto" spaceEvenly="true" centered="true">
             <Button
               onClick={() => changeTime("decrease", this.props.min)}
               className="smallButton"
@@ -84,27 +86,15 @@ class Incrementer extends Component {
 
 Incrementer.propTypes = {
   color: PropTypes.string,
-  width: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
-  height: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   max: PropTypes.number,
   min: PropTypes.number,
   addZeros: PropTypes.number,
   scale: PropTypes.string,
-  margin: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
-  padding: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ])
-}
+  margin: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  padding: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
 
 Incrementer.defaultProps = {
   width: 50,
@@ -114,7 +104,7 @@ Incrementer.defaultProps = {
   addZeros: 0,
   scale: "",
   margin: "0px",
-  padding: "0px"
+  padding: "0px",
 };
 
 export default Incrementer;

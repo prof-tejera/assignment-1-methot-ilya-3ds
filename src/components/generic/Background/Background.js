@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./Background.css";
 import FlexColumn from "../FlexDivs/FlexColumn.js";
+import PropTypes from "prop-types";
 
 const styles = {
   centered: {
@@ -23,7 +24,6 @@ class Background extends Component {
             flexDirection: "column",
             padding: this.props.padding,
             borderRadius: "25x",
-            ...(this.props.centered && styles.centered),
           }}
           className="Background"
         >
@@ -58,11 +58,16 @@ class Background extends Component {
   }
 }
 
+Background.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+  padding: PropTypes.string
+}
+
 Background.defaultProps = {
   width: 300,
   height: 400,
   padding: "10px",
-  centered: "true",
 };
 
 export default Background;
