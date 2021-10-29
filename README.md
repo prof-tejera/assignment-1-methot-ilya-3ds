@@ -2,13 +2,13 @@
 
 ##
 
-I wanted to put together a Neon-Themed timer ebcause I was designing my new space with Neon-Lighting. Experimented with glow effects to give the buttons a "lit" feeling. The infinity mirror was inspired by the sort of Synthwave / Light tunnel effect that I find very compelling in Neon-Style works. 
+I wanted to put together a Neon-Themed timer. Experimented with glow effects to give the buttons a "lit" feeling. The infinity mirror was inspired by the sort of Synthwave / Light tunnel effect to add depth to the background.
 
 I think the result looks ok, but could use a bit of animation to make the timers feel more "Active". Animating the background would look really awesome - like driving through a tunnel. Maybe I'll try that.
 
 Link to Timer page:
 
-http://methot-ilya-3ds.github.io/assignment-1-methot-ilya-3ds
+http://prof-tejera.github.io/assignment-1-methot-ilya-3ds
 
 ##
 
