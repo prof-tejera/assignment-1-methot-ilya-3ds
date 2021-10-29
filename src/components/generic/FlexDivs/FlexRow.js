@@ -25,10 +25,10 @@ class FlexRow extends Component {
           flexWrap: "wrap",
           margin: this.props.margin,
           padding: this.props.padding,
-          justifyContent: "center",
           alignItems: "center",
           alignContent: "center",
-          boxSizing: "border-box"
+          boxSizing: "border-box",
+          justifyContent: this.props.spaceEvenly ? styles.spaceEvenly.justifyContent : styles.centered.justifyContent
         }}
         className="Flex-Column"
       >
@@ -55,7 +55,8 @@ FlexRow.propTypes = {
   padding: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+  spaceEvenly: PropTypes.string,
 }
 
 FlexRow.defaultProps = {
@@ -63,7 +64,8 @@ FlexRow.defaultProps = {
   width: "auto",
   height: "auto",
   margin: "0px;",
-  padding: "0px"
+  padding: "0px",
+  spaceEvenly: "false"
 }
 
 

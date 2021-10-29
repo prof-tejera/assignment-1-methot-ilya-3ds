@@ -157,10 +157,10 @@ class Tabata extends React.Component {
               <Incrementer padding="10px" width="30px" height="auto" max="60" min="0"/>
               
             <FlexRow width="100%" height="20%" padding="10px">
-              <NeonParagraph margin="10px" color="#00C0F9" size="18px" >Work</NeonParagraph>
-              <Incrementer  margin="10px" width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
-              <Incrementer margin="10px" width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
-              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Rest</NeonParagraph>
+              <NeonParagraph margin="10px" color="#00C0F9" size="14px" >Work</NeonParagraph>
+              <Incrementer  width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
+              <Incrementer width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
+              <NeonParagraph padding="10px" color="#00C0F9" size="14px" >Rest</NeonParagraph>
             </FlexRow>
             <FlexRow  height="30%" width="100%">
               <FlexRow padding="10px" height="50%"width="100%" centered="true" spaceEvenly="true" centered="true">
