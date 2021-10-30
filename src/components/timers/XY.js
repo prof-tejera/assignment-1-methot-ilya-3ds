@@ -168,15 +168,15 @@ class XY extends React.Component {
           <FlexRow height="25%" centered="true">
           <NeonParagraph color="#00C0F9" size="24px">XY</NeonParagraph>
           </FlexRow>
-          <FlexRow height="25%" padding="10px" spaceEvenly="true" centered="true" width="100%">
+          <FlexRow height="25%" padding="10px" width="100%">
             <NeonParagraph color="#00C0F9">Round</NeonParagraph>
-            <Incrementer width="30" height="30" max="360" min="0"/>
+            <Incrementer width="30px" height="30px" max="360" min="0"/>
           </FlexRow>
-          <FlexRow height="25%" padding="10px" spaceEvenly="true" centered="true" width="100%">
-            <Incrementer width="30" height="30" max="360" min="0" scale="d" />
-            <Incrementer width="30" height="30" max="24" min="0" scale="h" addZeros="2"/>
-            <Incrementer width="30" height="30" max="60" min="0" scale="m" addZeros="2"/>
-            <Incrementer width="30" height="30" max="60" min="0" scale="s" addZeros="2"/>
+          <FlexRow height="25%" padding="10px" spaceEvenly="true" width="100%">
+            <Incrementer width="30px" height="30px" max="360" min="0" scale="d" />
+            <Incrementer width="30px" height="30px" max="24" min="0" scale="h" addZeros="2"/>
+            <Incrementer width="30px" height="30px" max="60" min="0" scale="m" addZeros="2"/>
+            <Incrementer width="30px" height="30px" max="60" min="0" scale="s" addZeros="2"/>
           </FlexRow>
           <FlexRow height="25%" padding="10px" width="100%" centered="true">
             <NeonButton className="StartButton" onClick={start} width="30%" height="50px">Start</NeonButton>

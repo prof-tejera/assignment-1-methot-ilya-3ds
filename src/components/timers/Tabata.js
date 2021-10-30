@@ -147,19 +147,20 @@ class Tabata extends React.Component {
 
     return (
       <>
-        <Background centered="true" width="300px" padding="20px">
+        <Background centered="true" height="500px" width="300px" padding="20px">
 
 
 
               <NeonParagraph padding="10px" height="10%" color="#00C0F9" size="36px" >Tabata</NeonParagraph>
-              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Round</NeonParagraph>
+              
+              <NeonParagraph padding="10px" height="10%" color="#00C0F9" size="18px" >Round</NeonParagraph>
               <Incrementer padding="10px" width="30px" height="auto" max="60" min="0"/>
-
-            <FlexRow width="100%" height="30%" padding="10px">
-              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Work</NeonParagraph>
+              
+            <FlexRow width="100%" height="20%" padding="10px">
+              <NeonParagraph margin="10px" color="#00C0F9" size="14px" >Work</NeonParagraph>
               <Incrementer  width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
               <Incrementer width="50px" height="auto" max="60" min="0" scale="s" addZeros="2"/>
-              <NeonParagraph padding="10px" color="#00C0F9" size="18px" >Rest</NeonParagraph>
+              <NeonParagraph padding="10px" color="#00C0F9" size="14px" >Rest</NeonParagraph>
             </FlexRow>
             <FlexRow  height="30%" width="100%">
               <FlexRow padding="10px" height="50%"width="100%" centered="true" spaceEvenly="true" centered="true">

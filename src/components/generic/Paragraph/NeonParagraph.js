@@ -12,7 +12,8 @@ class NeonParagraph extends Component {
         height: this.props.height,
         width: this.props.width,
         margin: "0px",
-        padding: this.props.padding
+        padding: this.props.padding,
+        boxSizing: "border-box"
     }}>{this.props.children}</p>;
   }
 }
@@ -39,8 +40,8 @@ NeonParagraph.propTypes = {
 
 NeonParagraph.defaultProps = {
   color: "Blue",
-  width: "200px",
-  height: "200px",
+  width: "auto",
+  height: "auto",
   size: "24px",
   padding: "10px"
 }

@@ -1,5 +1,18 @@
 # Assignment 1
 
+##
+
+I wanted to put together a Neon-Themed timer. Experimented with glow effects to give the buttons a "lit" feeling. The infinity mirror was inspired by the sort of Synthwave / Light tunnel effect to add depth to the background.
+
+I think the result looks ok, but could use a bit of animation to make the timers feel more "Active". Animating the background would look really awesome - like driving through a tunnel. Maybe I'll try that.
+
+Link to Timer page:
+
+http://prof-tejera.github.io/assignment-1-methot-ilya-3ds
+
+##
+
+
 ## Objective
 
 For Assignment 1 (A1) we are going to be building a component libary that we can use for future assignments. Our main goal is to layout the components that will be composed together to create our final bigger components. We will focus on composition, component interfaces, and styling. We aren't going to focus on functionality quite yet and at first our components will be very static.

@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import DocumentComponent from "../components/documentation/DocumentComponent";
+import Background from "../components/generic/Background/Background";
 import NeonButton from "../components/generic/Button/NeonButtons";
 import FlexColumn from "../components/generic/FlexDivs/FlexColumn.js"
 import FlexRow from "../components/generic/FlexDivs/FlexRow";
+import Incrementer from "../components/generic/Incrementer/Incrementer";
+import Input from "../components/generic/Input/Input";
 import Loading from "../components/generic/Loading";
 import NeonParagraph from "../components/generic/Paragraph/NeonParagraph";
 
@@ -62,6 +65,30 @@ class Documentation extends React.Component {
             ]}
           />
           <DocumentComponent
+            title="Input"
+            component={<Input/>}
+            propDocs={[
+              {
+                prop: "width",
+                description: "Width of Input",
+                type: "string, number",
+                defaultValue: "50, 50px",
+              },
+              {
+                prop: "height",
+                description: "Height of Input",
+                type: "string, number",
+                defaultValue: "50, 50px",
+              },
+              {
+                prop: "disabled",
+                description: "Choose whether button is disabled (clickable)",
+                type: "bool",
+                defaultValue: "false",
+              },
+            ]}
+          />
+          <DocumentComponent
             title="FlexColumn"
             component={<FlexColumn><NeonButton>btn</NeonButton><NeonButton className="RestartButton">btn</NeonButton><NeonButton className="ClearButton">btn</NeonButton></FlexColumn>}
             propDocs={[
@@ -75,13 +102,13 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "margin",
@@ -94,6 +121,12 @@ class Documentation extends React.Component {
                 description: "padding of div",
                 type: "string, number",
                 defaultValue: "10px",
+              },
+              {
+                prop: "spaceEvenly",
+                description: "determines whether to space child content evenly. If 'false', center the content",
+                type: "string",
+                defaultValue: "false",
               },
             ]}
           />
@@ -111,13 +144,13 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of div",
                 type: "string, number",
-                defaultValue: "100px",
+                defaultValue: "auto",
               },
               {
                 prop: "margin",
@@ -131,10 +164,16 @@ class Documentation extends React.Component {
                 type: "string, number",
                 defaultValue: "10px",
               },
+              {
+                prop: "spaceEvenly",
+                description: "determines whether to space child content evenly. If 'false', center the content",
+                type: "string",
+                defaultValue: "false",
+              },
             ]}
           />
            <DocumentComponent
-            title="FlexRow"
+            title="NeonParagraph"
             component={<NeonParagraph>Neon Text</NeonParagraph>}
             propDocs={[
               {
@@ -147,13 +186,19 @@ class Documentation extends React.Component {
                 prop: "width",
                 description: "Width of text container",
                 type: "string, number",
-                defaultValue: "200px",
+                defaultValue: "auto",
               },
               {
                 prop: "height",
                 description: "Height of text container",
                 type: "string, number",
-                defaultValue: "200px",
+                defaultValue: "auto",
+              },
+              {
+                prop: "size",
+                description: "Size of text",
+                type: "string, number",
+                defaultValue: "24px",
               },
               {
                 prop: "padding",
@@ -163,7 +208,86 @@ class Documentation extends React.Component {
               },
             ]}
           />
+          <DocumentComponent
+            title="Incrementer"
+            component={<Incrementer/>}
+            propDocs={[
+              {
+                prop: "max",
+                description: "Max number the counter will increase to",
+                type: "number",
+                defaultValue: "10",
+              },
+              {
+                prop: "max",
+                description: "Min number the counter will decrease to",
+                type: "number",
+                defaultValue: "0",
+              },
+              {
+                prop: "addZeros",
+                description: "Display will always display this many numbers (example: setting addZeros to 2 will make 5 display as 05)",
+                type: "number",
+                defaultValue: "0",
+              },
+              {
+                prop: "scale",
+                description: "Character that appears besides number indicator display a scale (min, m, sec, s)",
+                type: "string",
+                defaultValue: "",
+              },
+              {
+                prop: "width",
+                description: "Width of object",
+                type: "string, number",
+                defaultValue: "auto",
+              },
+              {
+                prop: "height",
+                description: "Height of object",
+                type: "string, number",
+                defaultValue: "auto",
+              },
+              {
+                prop: "padding",
+                description: "padding of object",
+                type: "string, number",
+                defaultValue: "10px",
+              },
+              {
+                prop: "margin",
+                description: "Margin of object",
+                type: "string, number",
+                defaultValue: "0px",
+              },
+            ]}
+          />
+          <DocumentComponent
+            title="Background"
+            component={<Background/>}
+            propDocs={[
+              {
+                prop: "width",
+                description: "Width of object",
+                type: "string, number",
+                defaultValue: "300",
+              },
+              {
+                prop: "height",
+                description: "Height of object",
+                type: "string, number",
+                defaultValue: "400",
+              },
+              {
+                prop: "padding",
+                description: "padding of object",
+                type: "string, number",
+                defaultValue: "10px",
+              }
+            ]}
+          />
         </div>
+        
       </Container>
     );
   }
